@@ -23,7 +23,6 @@ module.exports = {
     'react',
     'react-hooks',
     '@typescript-eslint',
-    'tailwindcss'
   ],
   rules: {
     'no-unused-vars': 'off',

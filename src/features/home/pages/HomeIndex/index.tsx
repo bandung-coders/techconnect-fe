@@ -10,9 +10,6 @@ import { authLogout } from "@/features/auth/redux/slice";
 // Custom hooks
 import { useAppDispatch } from "@/features/app/hooks";
 
-// Utils
-import { modalConfirm } from "@/features/app/utils";
-
 const HomeIndex: React.FC = () => {
   const dispatch = useAppDispatch();
 
@@ -22,11 +19,7 @@ const HomeIndex: React.FC = () => {
    * @returns void
    */
   const onClickLogout = useCallback((): void => {
-    modalConfirm("info", {
-      onOk: () => {
-        dispatch(authLogout());
-      },
-    });
+    console.log("oke")
   }, [dispatch]);
 
   return (

@@ -4,9 +4,6 @@ import React, { useCallback } from "react";
 // React Router DOM
 import { useNavigate } from "react-router-dom";
 
-// Ant
-import { Button } from "antd";
-
 // CVA
 import { button, type IAppButtonProps } from "./cva";
 
@@ -38,14 +35,13 @@ const AppButton: React.FC<IAppButtonProps> = ({
   }, [navigateRoute, navigate]);
 
   return (
-    <Button
+    <button
       onClick={onClickButton}
       className={buttonClassName}
-      type="default"
       {...props}
     >
       {children}
-    </Button>
+    </button>
   );
 };
 

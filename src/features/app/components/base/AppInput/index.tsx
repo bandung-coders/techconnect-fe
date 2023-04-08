@@ -1,6 +1,3 @@
-// Ant
-import { Input } from "antd";
-
 import { AppText } from "@/features/app/components/base";
 
 // CVA
@@ -13,7 +10,7 @@ const AppInput: React.FC<IAppInputProps> = ({ label, ...props }) => (
         {label}
       </AppText>
     )}
-    <Input {...props} />
+    <input {...props} />
   </div>
 );
 

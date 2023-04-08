@@ -1,9 +1,6 @@
 // React
 import React, { useCallback } from "react";
 
-// Ant
-import { Form } from "antd";
-
 // Components
 import {
   AppButton,
@@ -22,8 +19,7 @@ import { authSetAuthenticatedUser } from "@/features/auth/redux/slice";
 
 const LoginForm: React.FC = () => {
   const dispatch = useAppDispatch();
-  const [formLogin] = Form.useForm();
-  const { login, isLoadingLogin } = useAuth();
+  const { login } = useAuth();
 
   /**
    * @description On submit login form
@@ -38,55 +34,36 @@ const LoginForm: React.FC = () => {
         const response = await login({ body: values }).unwrap();
         dispatch(authSetAuthenticatedUser(response));
       } catch (error) {
-        formLogin.resetFields();
+        //
       }
     },
-    [dispatch, formLogin, login]
+    [dispatch, login]
   );
 
   return (
-    <Form
-      onFinish={onFinish}
-      form={formLogin}
-      className="border-b border-gray-1 pb-1"
-    >
-      <Form.Item
-        name="user"
-        rules={[{ required: true, message: "Please input your username!" }]}
-      >
-        <AppInput
-          label="Email address or username"
-          placeholder="Email address or username"
-        />
-      </Form.Item>
+    <form className="border-b border-gray-1 pb-1">
+      <AppInput
+        label="Email address or username"
+      />
 
-      <Form.Item
-        name="password"
-        rules={[{ required: true, message: "Please input your password!" }]}
-      >
-        <AppInput type="password" label="Password" placeholder="Password" />
-      </Form.Item>
+      <AppInput label="Password" />
 
       <AppText className="underline" weight="semibold">
         Forgot your password?
       </AppText>
 
-      <Form.Item>
-        <div className="flex justify-between items-center mt-4">
-          <AppCheckBox>Remember me</AppCheckBox>
-          <AppButton
-            htmlType="submit"
-            className="w-[121px]"
-            color="spotify"
-            size="large"
-            rounded="large"
-            loading={isLoadingLogin}
-          >
-            LOG IN
-          </AppButton>
-        </div>
-      </Form.Item>
-    </Form>
+      <div className="flex justify-between items-center mt-4">
+        <AppCheckBox />
+        <AppButton
+          className="w-[121px]"
+          color="spotify"
+          size="large"
+          rounded="large"
+        >
+          LOG IN
+        </AppButton>
+      </div>
+    </form>
   );
 };
 

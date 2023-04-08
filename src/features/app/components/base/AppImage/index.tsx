@@ -1,15 +1,8 @@
-// Ant
-import { Image } from "antd";
-
 // Interfaces
 import { type IAppImageProps } from "./interfaces";
 
-const AppImage: React.FC = ({ preview, ...props }: IAppImageProps) => (
-  <Image preview={preview} {...props} />
+const AppImage: React.FC = ({ ...props }: IAppImageProps) => (
+  <img {...props} />
 );
-
-AppImage.defaultProps = {
-  preview: false,
-};
 
 export default AppImage;

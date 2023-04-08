@@ -15,7 +15,6 @@ const SignUp: React.FC = () => (
       navigate="/signup"
       size="large"
       rounded="large"
-      block
     >
       SIGN UP FOR SPOTIFY
     </AppButton>
