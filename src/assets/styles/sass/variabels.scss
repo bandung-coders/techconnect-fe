@@ -1,0 +1,27 @@
+// Colors
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+
+// Font size
+$font-size-base: 16px;
+$font-size-h1: $font-size-base * 2.5;
+$font-size-h2: $font-size-base * 2;
+$font-size-h3: $font-size-base * 1.75;
+$font-size-h4: $font-size-base * 1.5;
+$font-size-h5: $font-size-base * 1.25;
+$font-size-h6: $font-size-base * 1;
+
+// Typography
+$font-family-sans-serif: 'Open Sans', sans-serif;
+
+// Breakpoints
+$breakpoint-xs: 0; // Extra small screens
+$breakpoint-sm: 576px; // Small screens
+$breakpoint-md: 768px; // Medium screens
+$breakpoint-lg: 992px; // Large screens
+$breakpoint-xl: 1200px; // Extra large screens
+$breakpoint-xxl: 1400px; // Extra extra large screens

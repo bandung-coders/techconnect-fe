@@ -17,6 +17,9 @@ import { useAuth } from "@/features/auth/hooks";
 import { useAppDispatch } from "@/features/app/hooks";
 import { authSetAuthenticatedUser } from "@/features/auth/redux/slice";
 
+// Styles
+import "./styles.scss";
+
 const LoginForm: React.FC = () => {
   const dispatch = useAppDispatch();
   const { login } = useAuth();
@@ -41,29 +44,31 @@ const LoginForm: React.FC = () => {
   );
 
   return (
-    <form className="border-b border-gray-1 pb-1">
-      <AppInput
-        label="Email address or username"
-      />
+    // <form className="border-b border-gray-1 pb-1">
+    //   <AppInput label="Email address or username" />
 
-      <AppInput label="Password" />
+    //   <AppInput label="Password" />
 
-      <AppText className="underline" weight="semibold">
-        Forgot your password?
-      </AppText>
+    //   <AppText className="underline" weight="semibold">
+    //     Forgot your password?
+    //   </AppText>
 
-      <div className="flex justify-between items-center mt-4">
-        <AppCheckBox />
-        <AppButton
-          className="w-[121px]"
-          color="spotify"
-          size="large"
-          rounded="large"
-        >
-          LOG IN
-        </AppButton>
-      </div>
-    </form>
+    //   <div className="flex justify-between items-center mt-4">
+    //     <AppCheckBox />
+    //     <AppButton
+    //       className="mt-10"
+    //       color="spotify"
+    //       size="large"
+    //       rounded="large"
+    //     >
+    //       LOG IN
+    //     </AppButton>
+    //   </div>
+    // </form>
+    <>
+      <div>wkwk</div>
+      <div className="wkwk mt-6">wkwk2</div>
+    </>
   );
 };
 
