@@ -1,4 +1,4 @@
-import { AppText } from "@/features/app/components/base";
+import { AppText } from "@/features/app/components";
 
 // CVA
 import { type IAppInputProps } from "./cva";

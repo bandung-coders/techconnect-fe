@@ -2,7 +2,7 @@
 import { useCallback } from "react";
 
 // Components
-import { AppButton } from "@/features/app/components/base";
+import { AppButton } from "@/features/app/components";
 
 // Redux slice
 import { authLogout } from "@/features/auth/redux/slice";

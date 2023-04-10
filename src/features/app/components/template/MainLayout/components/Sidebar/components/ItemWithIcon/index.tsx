@@ -1,5 +1,5 @@
 // Components
-import { AppText } from "@/features/app/components/base";
+import { AppText } from "@/features/app/components";
 
 // Interfaces
 import { type IItemWithIconProps } from "./interfaces";

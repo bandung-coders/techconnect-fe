@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
 // Provider
-import { AppRouter } from "@/features/app/components/base";
+import { AppRouter } from "@/features/app/components";
 
 // Plugins
 import { persistor, store } from "./plugins/redux";

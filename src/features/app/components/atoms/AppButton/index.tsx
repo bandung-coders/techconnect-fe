@@ -5,9 +5,9 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 // CVA
-import { button, type IAppButtonProps } from "./cva";
+import { button } from "./cva";
 
-const AppButton: React.FC<IAppButtonProps> = ({
+const AppButton: React.FC<any> = ({
   children,
   navigate,
   className,
@@ -35,11 +35,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   }, [navigateRoute, navigate]);
 
   return (
-    <button
-      onClick={onClickButton}
-      className={buttonClassName}
-      {...props}
-    >
+    <button onClick={onClickButton} className={buttonClassName} {...props}>
       {children}
     </button>
   );

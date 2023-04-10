@@ -2,7 +2,7 @@
 import React from "react";
 
 // Components
-import { AppButton, AppText } from "@/features/app/components/base";
+import { AppButton, AppText } from "@/features/app/components";
 
 const SignUp: React.FC = () => (
   <div>
@@ -10,12 +10,7 @@ const SignUp: React.FC = () => (
       Don&apos;t have an account?
     </AppText>
 
-    <AppButton
-      className="mt-5"
-      navigate="/signup"
-      size="large"
-      rounded="large"
-    >
+    <AppButton className="mt-5" navigate="/signup" size="large" rounded="large">
       SIGN UP FOR SPOTIFY
     </AppButton>
   </div>

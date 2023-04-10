@@ -7,7 +7,7 @@ import {
   AppCheckBox,
   AppInput,
   AppText,
-} from "@/features/app/components/base";
+} from "@/features/app/components";
 
 // Interfaces
 import { type ILoginBody } from "@/features/auth/interfaces/api";
