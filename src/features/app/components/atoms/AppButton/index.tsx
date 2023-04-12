@@ -5,15 +5,17 @@ import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 
 // CVA
-import { button } from "./cva";
+import { type IAppButtonProps, button } from "./cva";
 
-const AppButton: React.FC<any> = ({
+const AppButton: React.FC<IAppButtonProps> = ({
   children,
   navigate,
   className,
   rounded,
   color,
-  ...props
+  size,
+  disabled,
+  onClick,
 }) => {
   const navigateRoute = useNavigate();
 
@@ -21,21 +23,28 @@ const AppButton: React.FC<any> = ({
     className,
     rounded,
     color,
+    size,
   });
 
   /**
-   * @description Handle navigate route
+   * @description Handle button click & navigate route
    *
    * @returns void
    */
-  const onClickButton = useCallback((): void => {
-    if (navigate != null) {
-      navigateRoute(navigate);
-    }
-  }, [navigateRoute, navigate]);
+  const onClickButton = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>): void => {
+      navigate !== undefined && navigateRoute(navigate);
+      onClick?.(event);
+    },
+    [navigate, navigateRoute, onClick]
+  );
 
   return (
-    <button onClick={onClickButton} className={buttonClassName} {...props}>
+    <button
+      onClick={onClickButton}
+      className={buttonClassName}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

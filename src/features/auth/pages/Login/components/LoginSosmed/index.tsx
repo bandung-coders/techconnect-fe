@@ -7,21 +7,15 @@ import { AppButton, AppText } from "@/features/app/components";
 const LoginSosmed: React.FC = () => (
   <>
     <div className="flex flex-col gap-3">
-      <AppButton color="facebook" size="large" rounded="large">
+      <AppButton color="info" size="medium" rounded="large">
         CONTINUE WITH FACEBOOK
       </AppButton>
 
-      <AppButton color="black-1" size="large" rounded="large">
-        CONTINUE WITH APPLE
-      </AppButton>
+      <AppButton>CONTINUE WITH APPLE</AppButton>
 
-      <AppButton size="large" rounded="large">
-        CONTINUE WITH GOOGLE
-      </AppButton>
+      <AppButton size="large">CONTINUE WITH GOOGLE</AppButton>
 
-      <AppButton size="large" rounded="large">
-        CONTINUE WITH PHONE NUMBER
-      </AppButton>
+      <AppButton size="large">CONTINUE WITH PHONE NUMBER</AppButton>
     </div>
 
     <div>

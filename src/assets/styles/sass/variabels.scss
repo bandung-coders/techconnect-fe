@@ -5,9 +5,22 @@ $success-color: #28a745;
 $danger-color: #dc3545;
 $info-color: #17a2b8;
 $warning-color: #ffc107;
+$facebook-color: #007bff;
+$spotify-color: #007bff;
+
+$colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  danger: $danger-color,
+  info: $info-color,
+  warning: $warning-color,
+  facebook: $facebook-color,
+  spotify: $spotify-color,
+);
 
 // Font size
-$font-size-base: 16px;
+$font-size-base: 12px;
 $font-size-h1: $font-size-base * 2.5;
 $font-size-h2: $font-size-base * 2;
 $font-size-h3: $font-size-base * 1.75;

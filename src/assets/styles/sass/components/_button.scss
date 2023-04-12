@@ -1,0 +1,73 @@
+$btn-padding: 4px 15px;
+$btn-font-size: 12px;
+$btn-color: white;
+$btn-border: none;
+$btn-transition: background-color 0.3s ease;
+
+$btn-rounded: (
+  small: 6px,
+  large: 25px
+);
+
+$btn-sizes: (
+  small: (
+    font-size: 10px,
+    padding: 3px 8px,
+    height: 26px,
+  ),
+  medium: (
+    font-size: $btn-font-size,
+    padding: $btn-padding,
+    height: 32px,
+  ),
+  large: (
+    font-size: 16px,
+    padding: 4px 15px,
+    height: 38px,
+  )
+);
+
+.btn {
+  padding: $btn-padding;
+  font-size: $btn-font-size;
+  color: $btn-color;
+  border: $btn-border;
+  height: 32px;
+  border-radius: map-get($btn-rounded, small);
+  cursor: pointer;
+  transition: $btn-transition;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+  }
+
+  &:disabled {
+    background-color: map-get($colors, info);
+    cursor: default;
+  }
+
+  @each $name, $color in $colors {
+    &--#{$name} {
+      background-color: $color;
+    }
+
+    &:hover {
+      background-color: rgba(red($color), green($color), blue($color), 0.8);
+    }
+  }
+
+  @each $name, $size in $btn-rounded {
+    &--rounded-#{$name} {
+      border-radius: $size;
+    }
+  }
+
+  @each $name, $style in $btn-sizes {
+    &--#{$name} {
+      @each $property, $value in $style {
+        #{$property}: $value;
+      }
+    }
+  }
+}

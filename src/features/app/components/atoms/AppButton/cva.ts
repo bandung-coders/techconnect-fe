@@ -1,22 +1,48 @@
-import { cva } from "class-variance-authority";
+// React
+import type React from "react";
 
-export const button = cva("", {
+// CVA
+import { type VariantProps, cva } from "class-variance-authority";
+
+// Interfaces
+import { type TButtonColor } from "@/features/app/interfaces/componentProps";
+
+export const button = cva("btn", {
   variants: {
     rounded: {
-      small: ["!rounded-[12px]"],
-      large: ["!rounded-[25px]"],
+      small: ["btn--rounded-small"],
+      large: ["btn--rounded-large"],
     },
     color: {
-      facebook: ["bg-facebook", "text-white-1"],
-      spotify: ["bg-spotify", "text-primary"],
-      "black-1": ["bg-black-1", "text-white-1"],
+      primary: ["bg-primary"],
+      secondary: ["bg-secondary"],
+      success: ["bg-success"],
+      danger: ["bg-danger"],
+      info: ["bg-info"],
+      warning: ["bg-warning"],
+      facebook: ["bg-facebook"],
+      spotify: ["bg-spotify"],
+    },
+    size: {
+      small: ["btn--small"],
+      medium: ["btn--medium"],
+      large: ["btn--large"],
     },
   },
-  // compoundVariants: [{ rounded: "small" }],
+  defaultVariants: {
+    color: "primary",
+    rounded: "small",
+    size: "medium",
+  },
 });
 
-// export interface IAppButtonProps VariantProps<typeof button> {
-//   navigate?: string;
-//   rounded?: "small" | "large";
-//   color?: "facebook" | "black-1" | "spotify";
-// }
+export interface IAppButtonProps extends VariantProps<typeof button> {
+  children: React.ReactNode;
+  className?: string;
+  navigate?: string;
+  rounded?: "small" | "large";
+  color?: TButtonColor;
+  size?: "small" | "medium" | "large";
+  disabled?: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
