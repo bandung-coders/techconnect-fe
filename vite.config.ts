@@ -6,7 +6,7 @@ import alias from '@rollup/plugin-alias';
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
-    port: 8080
+    port: 9000
   },
   plugins: [
     react(), 
