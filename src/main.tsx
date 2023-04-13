@@ -15,7 +15,7 @@ import "@/plugins/moment";
 import { PersistGate } from "redux-persist/integration/react";
 
 // SASS
-import "@/assets/styles/sass/index.scss";
+import "@/assets/styles/sass/_index.scss";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>

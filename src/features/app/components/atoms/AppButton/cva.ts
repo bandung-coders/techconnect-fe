@@ -5,7 +5,7 @@ import type React from "react";
 import { type VariantProps, cva } from "class-variance-authority";
 
 // Interfaces
-import { type TButtonColor } from "@/features/app/interfaces/componentProps";
+import { type TGlobalColor } from "@/features/app/interfaces/componentProps";
 
 export const button = cva("btn", {
   variants: {
@@ -41,7 +41,7 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   className?: string;
   navigate?: string;
   rounded?: "small" | "large";
-  color?: TButtonColor;
+  color?: TGlobalColor;
   size?: "small" | "medium" | "large";
   disabled?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;

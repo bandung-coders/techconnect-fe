@@ -1,4 +1,4 @@
-export type TButtonColor =
+export type TGlobalColor =
   | "primary"
   | "secondary"
   | "success"

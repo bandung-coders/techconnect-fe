@@ -5,7 +5,7 @@ import React from "react";
 import { Content, LoginForm, LoginSosmed, Navbar, SignUp } from "./components";
 
 const Login: React.FC = () => (
-  <div className="flex flex-col h-[100vh]">
+  <div className="app-login">
     <Navbar />
     <Content>
       <LoginSosmed />

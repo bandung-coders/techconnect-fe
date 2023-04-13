@@ -34,6 +34,16 @@ $space-values: (
 
 @for $i from 0 through 20 {
   $suffix: if($i == 0, "", "-#{$i}");
+
+  // Margin
+  .mx#{$suffix} {
+    @include space(margin-right, $i);
+    @include space(margin-left, $i);
+  }
+  .my#{$suffix} {
+    @include space(margin-top, $i);
+    @include space(margin-bottom, $i);
+  }
   .mt#{$suffix} {
     @include space(margin-top, $i);
   }
@@ -45,6 +55,16 @@ $space-values: (
   }
   .ml#{$suffix} {
     @include space(margin-left, $i);
+  }
+
+  // Padding
+  .px#{$suffix} {
+    @include space(margin-right, $i);
+    @include space(margin-left, $i);
+  }
+  .py#{$suffix} {
+    @include space(margin-top, $i);
+    @include space(margin-bottom, $i);
   }
   .pt#{$suffix} {
     @include space(margin-top, $i);
