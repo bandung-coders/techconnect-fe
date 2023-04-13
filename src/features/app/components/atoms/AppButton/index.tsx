@@ -15,6 +15,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   color,
   size,
   disabled,
+  block,
   onClick,
 }) => {
   const navigateRoute = useNavigate();
@@ -24,6 +25,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
     rounded,
     color,
     size,
+    block,
   });
 
   /**

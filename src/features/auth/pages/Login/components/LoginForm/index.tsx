@@ -17,9 +17,6 @@ import { useAuth } from "@/features/auth/hooks";
 import { useAppDispatch } from "@/features/app/hooks";
 import { authSetAuthenticatedUser } from "@/features/auth/redux/slice";
 
-// Styles
-import "./styles.scss";
-
 const LoginForm: React.FC = () => {
   const dispatch = useAppDispatch();
   const { login } = useAuth();

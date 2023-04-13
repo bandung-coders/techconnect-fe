@@ -28,6 +28,9 @@ export const button = cva("btn", {
       medium: ["btn--medium"],
       large: ["btn--large"],
     },
+    block: {
+      true: ["btn--block"],
+    },
   },
   defaultVariants: {
     color: "primary",
@@ -44,5 +47,6 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   color?: TGlobalColor;
   size?: "small" | "medium" | "large";
   disabled?: boolean;
+  block?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

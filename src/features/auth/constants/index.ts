@@ -1,5 +1,5 @@
 // Interfaces
-import { type IInitAuthState } from "./interface";
+import { type IInitAuthState } from "../interfaces/slice";
 
 export const INIT_AUTH_STATE: IInitAuthState = {
   auth: {

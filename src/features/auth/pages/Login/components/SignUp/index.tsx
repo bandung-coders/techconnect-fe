@@ -10,7 +10,7 @@ const SignUp: React.FC = () => (
       Don&apos;t have an account?
     </AppText>
 
-    <AppButton className="mt-5" navigate="/signup" size="large" rounded="large">
+    <AppButton className="mt-5" navigate="/signup" size="large">
       SIGN UP FOR SPOTIFY
     </AppButton>
   </div>

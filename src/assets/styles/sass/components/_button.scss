@@ -37,6 +37,10 @@ $btn-sizes: (
   cursor: pointer;
   transition: $btn-transition;
 
+  &--block {
+    width: 100%;
+  }
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);

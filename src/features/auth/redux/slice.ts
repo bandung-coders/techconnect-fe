@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 // Constants
-import { INIT_AUTH_STATE } from "../constants/index";
+import { INIT_AUTH_STATE } from "../constants";
 
 export const authSlice = createSlice({
   name: "auth",
