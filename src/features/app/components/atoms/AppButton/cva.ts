@@ -19,7 +19,7 @@ export const button = cva("btn", {
       warning: ["btn--warning"],
       facebook: ["btn--facebook"],
       spotify: ["btn--spotify"],
-      dark: ["btn--dark"],
+      "dark-1": ["btn--dark-1"],
       blank: ["btn--transparent"],
     },
     size: {
@@ -50,7 +50,7 @@ type TColor =
   | "warning"
   | "facebook"
   | "spotify"
-  | "dark"
+  | "dark-1"
   | "blank";
 
 export interface IAppButtonProps extends VariantProps<typeof button> {
@@ -63,5 +63,6 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   disabled?: boolean;
   block?: boolean;
   loading?: boolean;
+  width?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

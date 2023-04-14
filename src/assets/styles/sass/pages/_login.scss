@@ -34,4 +34,10 @@
       }
     }
   }
+
+  &__sosmed {
+    @extend .gap-3;
+    display: flex;
+    flex-direction: column;
+  }
 }

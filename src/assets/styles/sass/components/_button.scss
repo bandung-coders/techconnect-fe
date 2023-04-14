@@ -5,7 +5,7 @@ $btn-transition: background-color 0.3s ease;
 
 $btn-rounded: (
   small: 6px,
-  large: 25px
+  large: 25px,
 );
 
 $btn-sizes: (
@@ -27,7 +27,7 @@ $btn-sizes: (
     line-height: 2,
     padding: 4px 15px,
     height: 48px,
-  )
+  ),
 );
 
 .btn {
@@ -53,8 +53,17 @@ $btn-sizes: (
     cursor: default;
   }
 
+  &--transparent {
+    background-color: transparent;
+    color: $gray-2-color;
+    border: 1px solid $gray-2-color;
+  }
+
   &--loading {
     opacity: 0.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__loading {
@@ -112,7 +121,7 @@ $btn-sizes: (
     color: $dark-1-color;
   }
 
-  &--dark {
+  &--dark-1 {
     background-color: $dark-1-color;
     color: $white-1-color;
   }

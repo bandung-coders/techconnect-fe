@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 // CVA
 import { type IAppButtonProps, button } from "./cva";
+import { ReactSVG } from "react-svg";
 
 const AppButton: React.FC<IAppButtonProps> = ({
   children,
@@ -17,6 +18,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   disabled,
   block,
   loading,
+  width,
   onClick,
 }) => {
   const navigateRoute = useNavigate();
@@ -38,22 +40,31 @@ const AppButton: React.FC<IAppButtonProps> = ({
   const onClickButton = useCallback(
     (event: React.MouseEvent<HTMLButtonElement>): void => {
       navigate !== undefined && navigateRoute(navigate);
-      onClick?.(event);
+      loading === false && onClick?.(event);
     },
-    [navigate, navigateRoute, onClick]
+    [loading, navigate, navigateRoute, onClick]
   );
 
   return (
     <button
       onClick={onClickButton}
       className={buttonClassName}
+      style={{ width }}
       disabled={disabled}
       type="button"
     >
-      {loading === true && <span className="btn__loading">Loading...</span>}
+      {loading === true && (
+        <span className="btn__loading">
+          <ReactSVG src="rolling-0.8s-24px.svg" />
+        </span>
+      )}
       {children}
     </button>
   );
+};
+
+AppButton.defaultProps = {
+  loading: false,
 };
 
 export default AppButton;

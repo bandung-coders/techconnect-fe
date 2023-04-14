@@ -6,12 +6,12 @@ import { AppButton, AppText } from "@/features/app/components";
 
 const LoginSosmed: React.FC = () => (
   <>
-    <div className="d-flex flex-column gap-3">
+    <div className="login__sosmed">
       <AppButton color="facebook" size="large" rounded="large">
         CONTINUE WITH FACEBOOK
       </AppButton>
 
-      <AppButton color="dark" size="large" rounded="large">
+      <AppButton color="dark-1" size="large" rounded="large">
         CONTINUE WITH APPLE
       </AppButton>
 

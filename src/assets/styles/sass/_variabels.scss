@@ -1,15 +1,16 @@
 // Colors
-$primary-color: #1ED760;
+$primary-color: #1ed760;
 $secondary-color: #6c757d;
 $success-color: #28a745;
 $danger-color: #dc3545;
 $info-color: #17a2b8;
 $warning-color: #ffc107;
-$facebook-color: #1877F2;
-$spotify-color: #1ED760;
+$facebook-color: #1877f2;
+$spotify-color: #1ed760;
 $dark-1-color: #191919;
-$white-1-color: #FFFFFF;
-$gray-1-color: #D9DADC;
+$white-1-color: #ffffff;
+$gray-1-color: #d9dadc;
+$gray-2-color: #6a6a6a;
 
 $colors: (
   primary: $primary-color,
@@ -35,7 +36,7 @@ $font-size-h5: $font-size-base * 1.25;
 $font-size-h6: $font-size-base * 1;
 
 // Typography
-$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-sans-serif: "Open Sans", sans-serif;
 
 // Breakpoints
 $breakpoint-xs: 0; // Extra small screens
