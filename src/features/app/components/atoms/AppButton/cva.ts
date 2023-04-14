@@ -4,9 +4,6 @@ import type React from "react";
 // CVA
 import { type VariantProps, cva } from "class-variance-authority";
 
-// Interfaces
-import { type TGlobalColor } from "@/features/app/interfaces/componentProps";
-
 export const button = cva("btn", {
   variants: {
     rounded: {
@@ -14,14 +11,16 @@ export const button = cva("btn", {
       large: ["btn--rounded-large"],
     },
     color: {
-      primary: ["bg-primary"],
-      secondary: ["bg-secondary"],
-      success: ["bg-success"],
-      danger: ["bg-danger"],
-      info: ["bg-info"],
-      warning: ["bg-warning"],
-      facebook: ["bg-facebook"],
-      spotify: ["bg-spotify"],
+      primary: ["btn--primary"],
+      secondary: ["btn--secondary"],
+      success: ["btn--success"],
+      danger: ["btn--danger"],
+      info: ["btn--info"],
+      warning: ["btn--warning"],
+      facebook: ["btn--facebook"],
+      spotify: ["btn--spotify"],
+      dark: ["btn--dark"],
+      blank: ["btn--transparent"],
     },
     size: {
       small: ["btn--small"],
@@ -31,6 +30,9 @@ export const button = cva("btn", {
     block: {
       true: ["btn--block"],
     },
+    loading: {
+      true: ["btn--loading"],
+    },
   },
   defaultVariants: {
     color: "primary",
@@ -39,14 +41,27 @@ export const button = cva("btn", {
   },
 });
 
+type TColor =
+  | "primary"
+  | "secondary"
+  | "success"
+  | "danger"
+  | "info"
+  | "warning"
+  | "facebook"
+  | "spotify"
+  | "dark"
+  | "blank";
+
 export interface IAppButtonProps extends VariantProps<typeof button> {
   children: React.ReactNode;
   className?: string;
   navigate?: string;
   rounded?: "small" | "large";
-  color?: TGlobalColor;
+  color?: TColor;
   size?: "small" | "medium" | "large";
   disabled?: boolean;
   block?: boolean;
+  loading?: boolean;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

@@ -6,4 +6,7 @@ export type TGlobalColor =
   | "info"
   | "warning"
   | "facebook"
-  | "spotify";
+  | "spotify"
+  | "dark-1"
+  | "white-1"
+  | "gray-1";

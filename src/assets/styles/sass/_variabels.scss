@@ -1,12 +1,15 @@
 // Colors
-$primary-color: #007bff;
+$primary-color: #1ED760;
 $secondary-color: #6c757d;
 $success-color: #28a745;
 $danger-color: #dc3545;
 $info-color: #17a2b8;
 $warning-color: #ffc107;
-$facebook-color: #007bff;
-$spotify-color: #007bff;
+$facebook-color: #1877F2;
+$spotify-color: #1ED760;
+$dark-1-color: #191919;
+$white-1-color: #FFFFFF;
+$gray-1-color: #D9DADC;
 
 $colors: (
   primary: $primary-color,
@@ -17,6 +20,9 @@ $colors: (
   warning: $warning-color,
   facebook: $facebook-color,
   spotify: $spotify-color,
+  dark-1: $dark-1-color,
+  white-1: $white-1-color,
+  gray-1: $gray-1-color,
 );
 
 // Font size

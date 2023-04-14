@@ -16,6 +16,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   size,
   disabled,
   block,
+  loading,
   onClick,
 }) => {
   const navigateRoute = useNavigate();
@@ -26,6 +27,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
     color,
     size,
     block,
+    loading,
   });
 
   /**
@@ -46,7 +48,9 @@ const AppButton: React.FC<IAppButtonProps> = ({
       onClick={onClickButton}
       className={buttonClassName}
       disabled={disabled}
+      type="button"
     >
+      {loading === true && <span className="btn__loading">Loading...</span>}
       {children}
     </button>
   );

@@ -7,15 +7,10 @@ const AppText: React.FC<IAppTextProps> = ({
   size,
   weight,
   align,
-  ...props
 }) => {
   const textClassName = text({ className, size, weight, align });
 
-  return (
-    <div className={textClassName} {...props}>
-      {children}
-    </div>
-  );
+  return <div className={textClassName}>{children}</div>;
 };
 
 export default AppText;

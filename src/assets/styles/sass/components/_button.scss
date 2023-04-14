@@ -1,6 +1,5 @@
 $btn-padding: 4px 15px;
 $btn-font-size: 12px;
-$btn-color: #FFFFFF;
 $btn-border: none;
 $btn-transition: background-color 0.3s ease;
 
@@ -13,24 +12,27 @@ $btn-sizes: (
   small: (
     font-size: 10px,
     padding: 3px 8px,
+    font-weight: 200,
     height: 26px,
   ),
   medium: (
     font-size: $btn-font-size,
     padding: $btn-padding,
+    font-weight: 400,
     height: 32px,
   ),
   large: (
-    font-size: 16px,
+    font-size: 0.875rem,
+    font-weight: 700,
+    line-height: 2,
     padding: 4px 15px,
-    height: 38px,
+    height: 48px,
   )
 );
 
 .btn {
   padding: $btn-padding;
   font-size: $btn-font-size;
-  color: $btn-color;
   border: $btn-border;
   height: 32px;
   border-radius: map-get($btn-rounded, small);
@@ -51,14 +53,68 @@ $btn-sizes: (
     cursor: default;
   }
 
-  @each $name, $color in $colors {
-    &--#{$name} {
-      background-color: $color;
-    }
+  &--loading {
+    opacity: 0.7;
+  }
 
-    &:hover {
-      background-color: rgba(red($color), green($color), blue($color), 0.8);
+  &__loading {
+    animation: slide-right 0.5s forwards;
+
+    @keyframes slide-right {
+      from {
+        opacity: 0;
+        margin-right: 0;
+      }
+      to {
+        opacity: 1;
+        margin-right: 10px;
+      }
     }
+  }
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white-1-color;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+    color: $white-1-color;
+  }
+
+  &--success {
+    background-color: $success-color;
+    color: $white-1-color;
+  }
+
+  &--danger {
+    background-color: $danger-color;
+    color: $white-1-color;
+  }
+
+  &--info {
+    background-color: $info-color;
+    color: $white-1-color;
+  }
+
+  &--warning {
+    background-color: $warning-color;
+    color: $white-1-color;
+  }
+
+  &--facebook {
+    background-color: $facebook-color;
+    color: $white-1-color;
+  }
+
+  &--spotify {
+    background-color: $spotify-color;
+    color: $dark-1-color;
+  }
+
+  &--dark {
+    background-color: $dark-1-color;
+    color: $white-1-color;
   }
 
   @each $name, $size in $btn-rounded {

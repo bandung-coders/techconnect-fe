@@ -5,7 +5,7 @@ import React from "react";
 import { Content, LoginForm, LoginSosmed, Navbar, SignUp } from "./components";
 
 const Login: React.FC = () => (
-  <div className="app-login">
+  <div className="login">
     <Navbar />
     <Content>
       <LoginSosmed />

@@ -23,7 +23,6 @@ export const text = cva("", {
       center: ["text-center"],
     },
   },
-  // compoundVariants: [{ size: "medium", weight: "normal"}],
   defaultVariants: {
     size: "medium",
     weight: "semibold",

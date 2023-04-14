@@ -5,8 +5,8 @@ import Logo from "@/assets/images/main-logo-black-1.png";
 import { AppImage } from "@/features/app/components";
 
 const Navbar: React.FC = () => (
-  <div className="flex justify-center border-b border-gray-1 py-7">
-    <AppImage src={Logo} alt="Deskripsi gambar" />
+  <div className="login__navbar">
+    <AppImage width="143px" src={Logo} alt="Deskripsi gambar" />
   </div>
 );
 

@@ -1,5 +1,37 @@
-.app-login {
+.login {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  &__navbar {
+    @extend .py-7;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+
+    &-inner {
+      @extend .gap-7;
+      @extend .py-9;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 450px;
+
+      &-bottom {
+        @extend .px-5;
+        position: relative;
+        z-index: 1;
+        left: 43%;
+        background-color: white;
+        width: max-content;
+        font-size: 0.855rem;
+      }
+    }
+  }
 }
