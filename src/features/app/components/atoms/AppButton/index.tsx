@@ -19,6 +19,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   block,
   loading,
   width,
+  icon,
   onClick,
 }) => {
   const navigateRoute = useNavigate();
@@ -53,12 +54,22 @@ const AppButton: React.FC<IAppButtonProps> = ({
       disabled={disabled}
       type="button"
     >
-      {loading === true && (
-        <span className="btn__loading">
-          <ReactSVG src="rolling-0.8s-24px.svg" />
-        </span>
+      {icon !== undefined && loading === false && (
+        <ReactSVG
+          src={icon}
+          className="mr-3"
+          wrapper="span"
+          style={{ padding: 0 }}
+        />
       )}
-      {children}
+      {loading === true && (
+        <ReactSVG
+          className="btn__loading"
+          src="rolling-0.8s-24px.svg"
+          wrapper="span"
+        />
+      )}
+      <span>{children}</span>
     </button>
   );
 };

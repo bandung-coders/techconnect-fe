@@ -64,5 +64,6 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   block?: boolean;
   loading?: boolean;
   width?: string;
+  icon?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }

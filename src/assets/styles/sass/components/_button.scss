@@ -38,6 +38,9 @@ $btn-sizes: (
   border-radius: map-get($btn-rounded, small);
   cursor: pointer;
   transition: $btn-transition;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &--block {
     width: 100%;
@@ -59,11 +62,9 @@ $btn-sizes: (
     border: 1px solid $gray-2-color;
   }
 
-  &--loading {
+  &--loading,
+  &--icon {
     opacity: 0.7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &__loading {
