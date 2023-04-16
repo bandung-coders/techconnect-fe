@@ -1,31 +1,26 @@
 // CVA
 import { cva, type VariantProps } from "class-variance-authority";
 
-export const text = cva("", {
+export const text = cva("text", {
   variants: {
     size: {
-      small: ["text-small"],
-      medium: ["text-base"],
-      large: ["text-large"],
-      xlarge: ["text-xlarge"],
-      x2large: ["text-x2large"],
+      small: ["text--small"],
+      medium: ["text--base"],
+      large: ["text--large"],
+      xlarge: ["text--xlarge"],
+      x2large: ["text--x2large"],
     },
     weight: {
-      normal: ["font-normal"],
-      semibold: ["font-semibold"],
-      bold: ["font-bold"],
-      xbold: ["font-extrabold"],
-      "2xlbold": ["font-black"],
-    },
-    align: {
-      left: ["text-left"],
-      right: ["text-right"],
-      center: ["text-center"],
+      normal: ["text--normal"],
+      semibold: ["text--semibold"],
+      bold: ["text--bold"],
+      xbold: ["text--xbold"],
+      "2xlbold": ["text--2xlbold"],
     },
   },
   defaultVariants: {
     size: "medium",
-    weight: "semibold",
+    weight: "normal",
   },
 });
 
@@ -35,5 +30,5 @@ export interface IAppTextProps extends VariantProps<typeof text> {
   children: string | number;
   size?: "small" | "medium" | "large" | "xlarge" | "x2large";
   weight?: "normal" | "bold" | "semibold" | "xbold" | "2xlbold";
-  align?: "left" | "right" | "center";
+  onClick?: () => void;
 }

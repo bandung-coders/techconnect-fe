@@ -26,8 +26,9 @@ $colors: (
   gray-1: $gray-1-color,
 );
 
-// Font size
-$font-size-base: 12px;
+// Font
+$font-family-main: "Circular Std Book", sans-serif;
+$font-size-base: 16px;
 $font-size-h1: $font-size-base * 2.5;
 $font-size-h2: $font-size-base * 2;
 $font-size-h3: $font-size-base * 1.75;

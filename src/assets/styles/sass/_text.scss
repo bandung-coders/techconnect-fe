@@ -1,0 +1,33 @@
+$text-sizes: (
+  small: 12px,
+  medium: $font-size-base,
+  large: 22px,
+  xlarge: 28px,
+  x2large: 32px,
+);
+
+$text-weights: (
+  normal: 400,
+  semibold: 500,
+  bold: 600,
+  xbold: 700,
+  2xbold: 900,
+);
+
+.text {
+  @each $size, $value in $text-sizes {
+    &--#{$size} {
+      font-size: $value;
+    }
+  }
+
+  @each $weight, $value in $text-weights {
+    &--#{$weight} {
+      font-weight: $value;
+    }
+  }
+
+  &--underline {
+    text-decoration: underline;
+  }
+}
