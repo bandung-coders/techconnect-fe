@@ -1,1 +1,3 @@
-export interface IAppCheckBoxProps {}
+export interface IAppCheckBoxProps {
+  label?: string;
+}

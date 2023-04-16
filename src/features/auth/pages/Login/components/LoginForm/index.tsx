@@ -41,21 +41,20 @@ const LoginForm: React.FC = () => {
   );
 
   return (
-    <form className="border-b border-gray-1 pb-1">
-      <AppInput label="Email address or username" />
+    <form className="login__form">
+      <AppInput
+        label="Email address or username"
+        placeholder="Email address or username"
+      />
 
-      <AppInput label="Password" />
+      <AppInput label="Password" placeholder="Password" />
 
       <AppText className="text--underline">Forgot your password?</AppText>
 
-      <div className="flex justify-between items-center mt-4">
-        <AppCheckBox />
-        <AppButton
-          className="mt-10"
-          color="spotify"
-          size="large"
-          rounded="large"
-        >
+      <div className="d-flex justify-between align-center mt-4">
+        <AppCheckBox label="Remember me" />
+
+        <AppButton color="spotify" width="121px" size="large" rounded="large">
           LOG IN
         </AppButton>
       </div>

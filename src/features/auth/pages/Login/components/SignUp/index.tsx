@@ -6,12 +6,13 @@ import { AppButton, AppText } from "@/features/app/components";
 
 const SignUp: React.FC = () => (
   <div>
-    <AppText size="large" weight="semibold" align="center">
+    <AppText className="text--center" weight="bold">
       Don&apos;t have an account?
     </AppText>
 
     <AppButton
       className="mt-5"
+      color="blank"
       navigate="/signup"
       size="large"
       rounded="large"

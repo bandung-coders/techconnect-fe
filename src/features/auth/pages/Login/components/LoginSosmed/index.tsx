@@ -24,11 +24,11 @@ const LoginSosmed: React.FC = () => (
       </AppButton>
     </div>
 
-    <div>
-      <AppText className="login__content-inner-bottom" weight="semibold">
+    <div style={{ height: "20px" }}>
+      <AppText className="login__or" weight="semibold">
         OR
       </AppText>
-      <hr className="relative bottom-4 z-0 text-gray-1" />
+      <hr className="login__or-line" />
     </div>
   </>
 );

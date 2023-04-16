@@ -20,7 +20,7 @@ $space-values: (
   17: 4.25rem,
   18: 4.5rem,
   19: 4.75rem,
-  20: 5rem
+  20: 5rem,
 );
 
 @mixin space($property, $value) {
@@ -33,9 +33,12 @@ $space-values: (
 }
 
 @for $i from 0 through 20 {
-  $suffix: if($i == 0, "", "-#{$i}");
+  $suffix: "-#{$i}";
 
   // Margin
+  .m#{$suffix} {
+    @include space(margin, $i);
+  }
   .mx#{$suffix} {
     @include space(margin-right, $i);
     @include space(margin-left, $i);
@@ -58,6 +61,9 @@ $space-values: (
   }
 
   // Padding
+  .p#{$suffix} {
+    @include space(padding, $i);
+  }
   .px#{$suffix} {
     @include space(padding-right, $i);
     @include space(padding-left, $i);
@@ -121,7 +127,7 @@ $justify-content: (
   center: center,
   between: space-between,
   around: space-around,
-  evenly: space-evenly
+  evenly: space-evenly,
 );
 
 $align-items: (
@@ -129,20 +135,20 @@ $align-items: (
   end: flex-end,
   center: center,
   stretch: stretch,
-  baseline: baseline
+  baseline: baseline,
 );
 
 $flex-direction: (
   row: row,
   row-reverse: row-reverse,
   column: column,
-  column-reverse: column-reverse
+  column-reverse: column-reverse,
 );
 
 $flex-wrap: (
   nowrap: nowrap,
   wrap: wrap,
-  wrap-reverse: wrap-reverse
+  wrap-reverse: wrap-reverse,
 );
 
 @each $key, $value in $justify-content {
@@ -176,7 +182,7 @@ $breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px
+  xxl: 1400px,
 );
 
 @mixin media($breakpoint) {

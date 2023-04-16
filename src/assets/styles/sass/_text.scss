@@ -14,6 +14,12 @@ $text-weights: (
   2xbold: 900,
 );
 
+$text-aligns: (
+  center: center,
+  left: left,
+  right: right,
+);
+
 .text {
   @each $size, $value in $text-sizes {
     &--#{$size} {
@@ -24,6 +30,12 @@ $text-weights: (
   @each $weight, $value in $text-weights {
     &--#{$weight} {
       font-weight: $value;
+    }
+  }
+
+  @each $align, $value in $text-aligns {
+    &--#{$align} {
+      text-align: $value;
     }
   }
 
