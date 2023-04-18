@@ -26,7 +26,7 @@ const LoginSosmed: React.FC = () => {
       </div>
 
       <div style={{ height: "20px" }}>
-        <AppText className="login__or" weight="semibold">
+        <AppText className="login__or" weight="bold">
           OR
         </AppText>
         <hr className="login__or-line" />

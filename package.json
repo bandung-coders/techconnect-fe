@@ -20,7 +20,7 @@
     "react-router-dom": "^6.8.2",
     "react-svg": "^16.1.7",
     "redux-persist": "^6.0.0",
-    "yup": "^1.0.2"
+    "yup": "0.32.11"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^4.0.3",

@@ -7,6 +7,9 @@ import { useNavigate } from "react-router-dom";
 // React SVG
 import { ReactSVG } from "react-svg";
 
+// Components
+import { AppText } from "@/features/app/components";
+
 // CVA
 import { type IAppButtonProps, button } from "./cva";
 
@@ -72,7 +75,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
           wrapper="span"
         />
       )}
-      <span>{children}</span>
+      <AppText weight="semibold">{children}</AppText>
     </button>
   );
 };

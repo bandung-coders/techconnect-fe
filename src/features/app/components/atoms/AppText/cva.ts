@@ -35,7 +35,7 @@ export const text = cva("text", {
   },
   defaultVariants: {
     size: "medium",
-    weight: "semibold",
+    weight: "normal",
   },
 });
 

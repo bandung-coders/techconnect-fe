@@ -45,7 +45,7 @@ export const button = cva("btn", {
 });
 
 export interface IAppButtonProps extends VariantProps<typeof button> {
-  children: React.ReactNode;
+  children: string;
   className?: string;
   navigate?: string;
   rounded?: "small" | "large";

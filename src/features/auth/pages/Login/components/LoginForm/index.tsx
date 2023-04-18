@@ -75,7 +75,9 @@ const LoginForm: React.FC = () => {
             }
           />
 
-          <AppText className="text--underline">Forgot your password?</AppText>
+          <AppText className="text--underline" weight="semibold">
+            Forgot your password?
+          </AppText>
 
           <div className="d-flex justify-between align-center mt-4">
             <AppCheckBox label="Remember me" />
