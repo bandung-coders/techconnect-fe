@@ -8,10 +8,11 @@ const AppText: React.FC<IAppTextProps> = ({
   children,
   className,
   size,
+  color,
   weight,
   onClick,
 }) => {
-  const textClassName = text({ className, size, weight });
+  const textClassName = text({ className, size, color, weight });
 
   const onClickText = useCallback((): void => {
     onClick?.();

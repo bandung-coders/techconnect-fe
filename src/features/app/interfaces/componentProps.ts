@@ -1,4 +1,4 @@
-export type TGlobalColor =
+export type TColor =
   | "primary"
   | "secondary"
   | "success"
@@ -8,5 +8,4 @@ export type TGlobalColor =
   | "facebook"
   | "spotify"
   | "dark-1"
-  | "white-1"
-  | "gray-1";
+  | "blank";

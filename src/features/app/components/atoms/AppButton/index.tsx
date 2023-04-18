@@ -4,9 +4,11 @@ import React, { useCallback } from "react";
 // React Router DOM
 import { useNavigate } from "react-router-dom";
 
+// React SVG
+import { ReactSVG } from "react-svg";
+
 // CVA
 import { type IAppButtonProps, button } from "./cva";
-import { ReactSVG } from "react-svg";
 
 const AppButton: React.FC<IAppButtonProps> = ({
   children,
@@ -20,6 +22,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   loading,
   width,
   icon,
+  type,
   onClick,
 }) => {
   const navigateRoute = useNavigate();
@@ -52,7 +55,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
       className={buttonClassName}
       style={{ width }}
       disabled={disabled}
-      type="button"
+      type={type}
     >
       {icon !== undefined && loading === false && (
         <ReactSVG
@@ -76,6 +79,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
 
 AppButton.defaultProps = {
   loading: false,
+  type: "button",
 };
 
 export default AppButton;

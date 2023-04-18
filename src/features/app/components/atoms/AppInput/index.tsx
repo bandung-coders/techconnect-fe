@@ -5,8 +5,10 @@ import { type IAppInputProps, input } from "./cva";
 
 const AppInput: React.FC<IAppInputProps> = ({
   className,
+  name,
   placeholder,
   label,
+  errorMessage,
   ...props
 }) => {
   const inputClassName = input({ className });
@@ -18,7 +20,17 @@ const AppInput: React.FC<IAppInputProps> = ({
           {label}
         </AppText>
       )}
-      <input className={inputClassName} placeholder={placeholder} {...props} />
+      <input
+        name={name}
+        className={inputClassName}
+        placeholder={placeholder}
+        {...props}
+      />
+      {errorMessage !== undefined && (
+        <AppText color="danger" size="small" className="mt-1">
+          {errorMessage}
+        </AppText>
+      )}
     </div>
   );
 };

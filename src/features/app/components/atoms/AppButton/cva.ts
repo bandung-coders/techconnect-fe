@@ -4,6 +4,9 @@ import type React from "react";
 // CVA
 import { type VariantProps, cva } from "class-variance-authority";
 
+// Interfaces
+import { type TColor } from "@/features/app/interfaces";
+
 export const button = cva("btn", {
   variants: {
     rounded: {
@@ -41,18 +44,6 @@ export const button = cva("btn", {
   },
 });
 
-type TColor =
-  | "primary"
-  | "secondary"
-  | "success"
-  | "danger"
-  | "info"
-  | "warning"
-  | "facebook"
-  | "spotify"
-  | "dark-1"
-  | "blank";
-
 export interface IAppButtonProps extends VariantProps<typeof button> {
   children: React.ReactNode;
   className?: string;
@@ -65,5 +56,6 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   loading?: boolean;
   width?: string;
   icon?: string;
+  type?: "button" | "submit";
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
