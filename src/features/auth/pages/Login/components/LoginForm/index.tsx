@@ -20,7 +20,6 @@ import { type ILoginBody } from "@/features/auth/interfaces/api";
 import { useAuth } from "@/features/auth/hooks";
 import { useAppDispatch } from "@/features/app/hooks";
 import { authSetAuthenticatedUser } from "@/features/auth/redux/slice";
-import { type ILoginFormValues } from "./interfaces";
 
 const LoginForm: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -29,15 +28,20 @@ const LoginForm: React.FC = () => {
   /**
    * @description On submit login form
    *
-   * @param values ILoginFormValues
+   * @param values ILoginBody
    *
    * @returns Promise<void>
    */
   const onSubmitForm = useCallback(
-    async (values: ILoginBody): Promise<void> => {
-      console.log(values);
+    async (values: ILoginBody, { resetForm }): Promise<void> => {
+      try {
+        const response = await login({ body: values }).unwrap();
+        dispatch(authSetAuthenticatedUser(response));
+      } catch (_) {
+        resetForm();
+      }
     },
-    []
+    [dispatch, login]
   );
 
   // Validation Form

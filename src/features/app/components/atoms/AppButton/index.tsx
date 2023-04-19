@@ -7,9 +7,6 @@ import { useNavigate } from "react-router-dom";
 // React SVG
 import { ReactSVG } from "react-svg";
 
-// Components
-import { AppText } from "@/features/app/components";
-
 // CVA
 import { type IAppButtonProps, button } from "./cva";
 
