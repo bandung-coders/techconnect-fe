@@ -16,7 +16,7 @@ const AppInput: React.FC<IAppInputProps> = ({
   return (
     <div className="mb-5">
       {label !== undefined && (
-        <AppText className="mb-2" weight="xbold">
+        <AppText className="mb-2" size="small" weight="xbold">
           {label}
         </AppText>
       )}
@@ -27,9 +27,7 @@ const AppInput: React.FC<IAppInputProps> = ({
         {...props}
       />
       {errorMessage !== undefined && (
-        <AppText color="danger" size="small" className="mt-1">
-          {errorMessage}
-        </AppText>
+        <AppText className="input__error-message">{errorMessage}</AppText>
       )}
     </div>
   );

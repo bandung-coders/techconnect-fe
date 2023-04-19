@@ -14,6 +14,7 @@
     display: flex;
     flex: 1;
     justify-content: center;
+    padding: 0 10px;
 
     &-inner {
       @extend .gap-4, .pt-9, .pb-2;
@@ -35,7 +36,7 @@
     position: relative;
     z-index: 1;
     left: 43%;
-    background-color: white;
+    background-color: $white-1-color;
     width: max-content;
     font-size: 0.855rem;
 
@@ -48,7 +49,8 @@
   }
 
   &__form {
-    @extend .pb-7;
+    @extend .pb-6;
+    margin-bottom: 16px;
     border-bottom: 1px solid $gray-1-color;
   }
 }

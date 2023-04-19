@@ -28,7 +28,11 @@ $colors: (
 
 // Font
 $font-family-main: "Circular Light", sans-serif;
-$font-size-base: 0.875rem;
+$font-size-small: 14px;
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-xlarge: 22px;
+$font-size-x2large: 24px;
 $font-size-h1: $font-size-base * 2.5;
 $font-size-h2: $font-size-base * 2;
 $font-size-h3: $font-size-base * 1.75;

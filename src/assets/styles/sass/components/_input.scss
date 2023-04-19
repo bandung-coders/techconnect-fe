@@ -22,4 +22,11 @@
   &::placeholder {
     font-family: "Circular Book", sans-serif;
   }
+
+  &__error-message {
+    @extend .mt-1;
+    color: $danger-color;
+    font-family: "Circular Book", sans-serif;
+    font-size: $font-size-small;
+  }
 }

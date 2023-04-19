@@ -8,15 +8,25 @@ const LoginSosmed: React.FC = () => {
   return (
     <>
       <div className="login__sosmed">
-        <AppButton color="facebook" size="large" rounded="large">
+        <AppButton
+          color="facebook"
+          size="large"
+          rounded="large"
+          icon="facebook-circle-white-24x24.svg"
+        >
           CONTINUE WITH FACEBOOK
         </AppButton>
 
-        <AppButton color="dark-1" size="large" rounded="large">
+        <AppButton
+          color="dark-1"
+          size="large"
+          rounded="large"
+          icon="apple-white.svg"
+        >
           CONTINUE WITH APPLE
         </AppButton>
 
-        <AppButton color="blank" size="large" rounded="large">
+        <AppButton color="blank" size="large" rounded="large" icon="google.svg">
           CONTINUE WITH GOOGLE
         </AppButton>
 

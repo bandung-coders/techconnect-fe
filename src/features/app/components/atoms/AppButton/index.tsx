@@ -60,12 +60,17 @@ const AppButton: React.FC<IAppButtonProps> = ({
       disabled={disabled}
       type={type}
     >
-      {icon !== undefined && loading === false && (
+      {icon !== undefined && loading === undefined && (
         <ReactSVG
           src={icon}
           className="mr-3"
           wrapper="span"
-          style={{ padding: 0 }}
+          beforeInjection={(svg) => {
+            svg.setAttribute(
+              "style",
+              "position: relative; top: 4px; left: 1px;"
+            );
+          }}
         />
       )}
       {loading === true && (
@@ -75,13 +80,12 @@ const AppButton: React.FC<IAppButtonProps> = ({
           wrapper="span"
         />
       )}
-      <AppText weight="semibold">{children}</AppText>
+      <span>{children}</span>
     </button>
   );
 };
 
 AppButton.defaultProps = {
-  loading: false,
   type: "button",
 };
 

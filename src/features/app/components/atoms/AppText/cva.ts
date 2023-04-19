@@ -8,10 +8,10 @@ export const text = cva("text", {
   variants: {
     size: {
       small: ["text--small"],
-      medium: ["text--base"],
+      medium: ["text--medium"],
       large: ["text--large"],
       xlarge: ["text--xlarge"],
-      x2large: ["text--x2large"],
+      "2xlarge": ["text--2xlarge"],
     },
     color: {
       primary: ["color-primary"],
@@ -30,7 +30,7 @@ export const text = cva("text", {
       semibold: ["text--semibold"],
       bold: ["text--bold"],
       xbold: ["text--xbold"],
-      "2xlbold": ["text--2xlbold"],
+      "2xbold": ["text--2xbold"],
     },
   },
   defaultVariants: {
@@ -43,8 +43,8 @@ export const text = cva("text", {
 export interface IAppTextProps extends VariantProps<typeof text> {
   className?: string;
   children: string | number;
-  size?: "small" | "medium" | "large" | "xlarge" | "x2large";
+  size?: "small" | "medium" | "large" | "xlarge" | "2xlarge";
   color?: TColor;
-  weight?: "normal" | "bold" | "semibold" | "xbold" | "2xlbold";
+  weight?: "normal" | "bold" | "semibold" | "xbold" | "2xbold";
   onClick?: () => void;
 }

@@ -10,19 +10,14 @@ $btn-rounded: (
 
 $btn-sizes: (
   small: (
-    font-size: 10px,
     padding: 3px 8px,
-    font-weight: 200,
     height: 26px,
   ),
   medium: (
-    font-size: $btn-font-size,
     padding: $btn-padding,
-    font-weight: 400,
     height: 32px,
   ),
   large: (
-    font-size: 0.875rem,
     font-weight: 700,
     line-height: 2,
     padding: 4px 15px,
@@ -41,6 +36,7 @@ $btn-sizes: (
   display: flex;
   align-items: center;
   justify-content: center;
+  letter-spacing: 2px;
 
   &--block {
     width: 100%;
@@ -137,6 +133,13 @@ $btn-sizes: (
     &--#{$name} {
       @each $property, $value in $style {
         #{$property}: $value;
+      }
+
+      span:last-child {
+        @if ($name == "large") {
+          font-size: 0.875rem;
+          font-family: "Circular Book", sans-serif;
+        }
       }
     }
   }
