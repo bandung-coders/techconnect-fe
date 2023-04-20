@@ -1,5 +1,15 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { type TPrepareHeaders } from "./interfaces";
+
+type TPrepareHeaders = (
+  headers: Headers,
+  api: {
+    getState: () => any;
+    extra: any;
+    endpoint: string;
+    type: "query" | "mutation";
+    forced: boolean | undefined;
+  }
+) => Headers;
 
 // Define a service using a base URL and expected endpoints
 const baseUrl = import.meta.env.VITE_APP_BASE_URL;

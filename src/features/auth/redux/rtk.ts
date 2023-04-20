@@ -1,4 +1,5 @@
-import serviceApi from "@/features/app/redux/rtk";
+// Service
+import serviceApi from "./service";
 
 // Interfaces
 import { type IRTKPayload } from "@/features/app/interfaces/rtk";

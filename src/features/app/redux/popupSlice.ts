@@ -12,12 +12,12 @@ export const popupSlice = createSlice({
   name: "popup",
   initialState,
   reducers: {
-    popupSetToast: (state, { payload }) => {
-      state.popup = { ...state, ...payload };
+    popupShowToast: (state) => {
+      state.popup = { ...state, toast: true };
     },
   },
 });
 
-export const { popupSetToast } = popupSlice.actions;
+export const { popupShowToast } = popupSlice.actions;
 
 export default popupSlice.reducer;
