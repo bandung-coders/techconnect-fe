@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 
 // Provider
-import { AppRouter } from "@/features/app/components";
+import { AppRouter, AppToast } from "@/features/app/components";
 
 // Plugins
 import { persistor, store } from "./plugins/redux";
@@ -22,6 +22,11 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <AppRouter />
+        <AppToast
+          type="success"
+          title="Success"
+          description="Your changes saved successfully!"
+        />
       </PersistGate>
     </Provider>
   </BrowserRouter>

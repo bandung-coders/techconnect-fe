@@ -50,3 +50,8 @@ $breakpoint-md: 768px; // Medium screens
 $breakpoint-lg: 992px; // Large screens
 $breakpoint-xl: 1200px; // Extra large screens
 $breakpoint-xxl: 1400px; // Extra extra large screens
+
+// Shadows
+$shadow-small: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+$shadow-large: 0 8px 16px 0 rgba(0, 0, 0, 0.15);
