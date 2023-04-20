@@ -10,7 +10,7 @@ $toast-types: (
   display: flex;
   justify-content: center;
   align-content: space-between;
-  width: 370px;
+  width: calc(100% - 48px);
   height: fit-content;
   min-height: 64px;
   padding: 8px 10px 8px 15px;
@@ -47,5 +47,9 @@ $toast-types: (
     &--#{$name} {
       border-left: 4px solid $type;
     }
+  }
+
+  @include media("sm") {
+    width: 370px;
   }
 }
