@@ -1,18 +1,23 @@
 // Redux Toolkit
 import { createSlice } from "@reduxjs/toolkit";
 
-// Constants
-import { INIT_AUTH_STATE } from "../constants";
+const initialState = {
+  auth: {
+    accessToken: null,
+    userData: {},
+    isLogin: false,
+  },
+};
 
 export const authSlice = createSlice({
   name: "auth",
-  initialState: INIT_AUTH_STATE,
+  initialState,
   reducers: {
     authSetAuthenticatedUser: (state, { payload }) => {
       state.auth = { ...state, ...payload, isLogin: true };
     },
     authLogout: (state) => {
-      state.auth = INIT_AUTH_STATE.auth;
+      state.auth = initialState.auth;
     },
   },
 });

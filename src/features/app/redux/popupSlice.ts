@@ -1,7 +1,6 @@
 // Redux Toolkit
 import { createSlice } from "@reduxjs/toolkit";
 
-// Constants
 const initialState = {
   popup: {
     toast: false,
@@ -13,11 +12,15 @@ export const popupSlice = createSlice({
   initialState,
   reducers: {
     popupShowToast: (state) => {
-      state.popup = { ...state, toast: true };
+      console.log(true);
+      state.popup = { ...state.popup, toast: true };
+    },
+    popupHideToast: (state) => {
+      state.popup = { ...state.popup, toast: false };
     },
   },
 });
 
-export const { popupShowToast } = popupSlice.actions;
+export const { popupShowToast, popupHideToast } = popupSlice.actions;
 
 export default popupSlice.reducer;

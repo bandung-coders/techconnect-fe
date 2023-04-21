@@ -3,8 +3,10 @@ import React from "react";
 
 // Components
 import { AppButton, AppText } from "@/features/app/components";
+import { useToast } from "@/features/app/hooks";
 
 const LoginSosmed: React.FC = () => {
+  const { showToast } = useToast();
   return (
     <>
       <div className="login__sosmed">
@@ -13,6 +15,9 @@ const LoginSosmed: React.FC = () => {
           size="large"
           rounded="large"
           icon="facebook-circle-white-24x24.svg"
+          onClick={() => {
+            showToast();
+          }}
         >
           CONTINUE WITH FACEBOOK
         </AppButton>

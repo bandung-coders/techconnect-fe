@@ -1,5 +1,5 @@
 // React
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 
 // React Router DOM
 import { useNavigate } from "react-router-dom";
@@ -84,6 +84,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
 
 AppButton.defaultProps = {
   type: "button",
+  loading: false,
 };
 
 export default AppButton;

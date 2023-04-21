@@ -10,27 +10,42 @@ import { AppText } from "@/features/app/components";
 // Interfaces
 import { toast, type IAppToast } from "./cva";
 
+// Custom hooks
+import { useAppSelector, useToast } from "@/features/app/hooks";
+
 const AppToast: React.FC<IAppToast> = ({ type, title, description }) => {
   const toastClassName = toast({ type });
-  const [showToast, setShowToast] = useState(true);
+  const isShowToast = useAppSelector((state) => state.popup.popup.toast);
+  const { hideToast } = useToast();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowToast(false);
+      hideToast();
     }, 100000);
 
     return () => {
       clearTimeout(timer);
     };
-  }, []);
+  }, [hideToast]);
+
+  /**
+   * @description close toast
+   *
+   * @returns void
+   */
+
+  useEffect(() => {
+    console.log(isShowToast);
+  }, [isShowToast]);
 
   const onClose = (): void => {
-    setShowToast(false);
+    console.log(isShowToast);
+    hideToast();
   };
 
   return (
     <>
-      {showToast && (
+      {isShowToast === true && (
         <div className={toastClassName}>
           <div className="toast__content">
             <AppText weight="bold">{title}</AppText>
