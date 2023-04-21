@@ -22,11 +22,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <AppRouter />
-        <AppToast
-          type="success"
-          title="Success"
-          description="Your changes saved successfully!"
-        />
+        <AppToast />
       </PersistGate>
     </Provider>
   </BrowserRouter>

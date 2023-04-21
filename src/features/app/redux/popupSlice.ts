@@ -3,7 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   popup: {
-    toast: false,
+    toast: {
+      type: "",
+      show: false,
+      title: "",
+      description: "",
+    },
   },
 };
 
@@ -11,12 +16,11 @@ export const popupSlice = createSlice({
   name: "popup",
   initialState,
   reducers: {
-    popupShowToast: (state) => {
-      console.log(true);
-      state.popup = { ...state.popup, toast: true };
+    popupShowToast: (state, { payload }) => {
+      state.popup.toast = { ...state.popup.toast, ...payload, show: true };
     },
     popupHideToast: (state) => {
-      state.popup = { ...state.popup, toast: false };
+      state.popup.toast = initialState.popup.toast;
     },
   },
 });

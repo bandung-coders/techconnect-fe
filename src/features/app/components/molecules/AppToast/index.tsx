@@ -1,5 +1,5 @@
 // React
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 // React SVG
 import { ReactSVG } from "react-svg";
@@ -8,20 +8,23 @@ import { ReactSVG } from "react-svg";
 import { AppText } from "@/features/app/components";
 
 // Interfaces
-import { toast, type IAppToast } from "./cva";
+import { toast } from "./cva";
 
 // Custom hooks
 import { useAppSelector, useToast } from "@/features/app/hooks";
 
-const AppToast: React.FC<IAppToast> = ({ type, title, description }) => {
+const AppToast: React.FC = () => {
+  const { show, type, title, description } = useAppSelector(
+    (state) => state.popup.popup.toast
+  );
+
   const toastClassName = toast({ type });
-  const isShowToast = useAppSelector((state) => state.popup.popup.toast);
   const { hideToast } = useToast();
 
   useEffect(() => {
     const timer = setTimeout(() => {
       hideToast();
-    }, 100000);
+    }, 5000);
 
     return () => {
       clearTimeout(timer);
@@ -33,19 +36,13 @@ const AppToast: React.FC<IAppToast> = ({ type, title, description }) => {
    *
    * @returns void
    */
-
-  useEffect(() => {
-    console.log(isShowToast);
-  }, [isShowToast]);
-
   const onClose = (): void => {
-    console.log(isShowToast);
     hideToast();
   };
 
   return (
     <>
-      {isShowToast === true && (
+      {show && (
         <div className={toastClassName}>
           <div className="toast__content">
             <AppText weight="bold">{title}</AppText>
