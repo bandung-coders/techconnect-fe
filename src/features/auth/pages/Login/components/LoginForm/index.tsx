@@ -23,7 +23,7 @@ import { authSetAuthenticatedUser } from "@/features/auth/redux/slice";
 
 const LoginForm: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { login } = useAuth();
+  const { login, isLoadingLogin } = useAuth();
 
   /**
    * @description On submit login form
@@ -93,6 +93,7 @@ const LoginForm: React.FC = () => {
             <AppCheckBox label="Remember me" />
 
             <AppButton
+              loading={isLoadingLogin}
               type="submit"
               color="spotify"
               width="121px"

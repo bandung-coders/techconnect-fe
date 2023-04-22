@@ -21,6 +21,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   block,
   loading,
   width,
+  height,
   icon,
   type,
   onClick,
@@ -53,7 +54,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
     <button
       onClick={onClickButton}
       className={buttonClassName}
-      style={{ width }}
+      style={{ width, height }}
       disabled={disabled}
       type={type}
     >

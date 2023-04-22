@@ -1,0 +1,60 @@
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.73);
+  backdrop-filter: blur(10px);
+  overflow: auto;
+
+  &__card {
+    @extend .gap-6;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: fit-content;
+    min-height: 84%;
+    background-color: $white-1-color;
+    border-radius: 12px;
+    padding: 24px;
+
+    animation: modal-show 180ms ease-out;
+    @keyframes modal-show {
+      0% {
+        transform: scale(0.4);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 12px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__footer {
+    @extend .gap-3;
+    display: flex;
+    justify-content: end;
+    margin-top: auto;
+  }
+}

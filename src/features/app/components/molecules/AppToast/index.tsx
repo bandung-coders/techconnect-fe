@@ -7,7 +7,7 @@ import { ReactSVG } from "react-svg";
 // Components
 import { AppText } from "@/features/app/components";
 
-// Interfaces
+// CVA
 import { toast } from "./cva";
 
 // Custom hooks
@@ -17,7 +17,6 @@ const AppToast: React.FC = () => {
   const { show, type, title, description } = useAppSelector(
     (state) => state.popup.popup.toast
   );
-
   const toastClassName = toast({ type });
   const { hideToast } = useToast();
 

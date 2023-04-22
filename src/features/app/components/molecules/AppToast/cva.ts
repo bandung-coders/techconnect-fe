@@ -12,9 +12,3 @@ export const toast = cva("toast", {
     type: "info",
   },
 });
-
-export interface IAppToast {
-  type?: "success" | "error" | "info";
-  title: string;
-  description: string;
-}
