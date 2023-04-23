@@ -5,6 +5,7 @@ import { type IAppInputProps, input } from "./cva";
 
 const AppInput: React.FC<IAppInputProps> = ({
   className,
+  type,
   name,
   placeholder,
   label,
@@ -21,6 +22,7 @@ const AppInput: React.FC<IAppInputProps> = ({
         </AppText>
       )}
       <input
+        type={type}
         name={name}
         className={inputClassName}
         placeholder={placeholder}
@@ -31,6 +33,10 @@ const AppInput: React.FC<IAppInputProps> = ({
       )}
     </div>
   );
+};
+
+AppInput.defaultProps = {
+  type: "text",
 };
 
 export default AppInput;

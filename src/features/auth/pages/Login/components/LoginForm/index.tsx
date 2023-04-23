@@ -75,6 +75,7 @@ const LoginForm: React.FC = () => {
 
           <Field
             as={AppInput}
+            type="password"
             name="password"
             label="Password"
             placeholder="Password"
