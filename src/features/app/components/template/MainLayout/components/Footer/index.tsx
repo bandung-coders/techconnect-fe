@@ -1,3 +1,3 @@
-const Footer: React.FC = () => <div className="p-7 bg-secondary">Footer</div>;
+const Footer: React.FC = () => <div className="app__footer">Footer</div>;
 
 export default Footer;
