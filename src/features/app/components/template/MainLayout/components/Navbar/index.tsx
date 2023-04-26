@@ -1,5 +1,5 @@
 const Navbar: React.FC = () => {
-  return <header className="h-[64px] bg-dark-1">Navbar</header>;
+  return <header className="app__navbar">Navbar</header>;
 };
 
 export default Navbar;

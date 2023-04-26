@@ -8,7 +8,7 @@ const LoginSosmed: React.FC = () => (
   <>
     <div className="login__sosmed">
       <AppButton
-        color="facebook"
+        variant="facebook"
         size="large"
         rounded="large"
         icon="facebook-circle-white-24x24.svg"
@@ -17,7 +17,7 @@ const LoginSosmed: React.FC = () => (
       </AppButton>
 
       <AppButton
-        color="dark-1"
+        variant="dark-1"
         size="large"
         rounded="large"
         icon="apple-white.svg"
@@ -25,11 +25,11 @@ const LoginSosmed: React.FC = () => (
         CONTINUE WITH APPLE
       </AppButton>
 
-      <AppButton color="blank" size="large" rounded="large" icon="google.svg">
+      <AppButton variant="blank" size="large" rounded="large" icon="google.svg">
         CONTINUE WITH GOOGLE
       </AppButton>
 
-      <AppButton color="blank" size="large" rounded="large">
+      <AppButton variant="blank" size="large" rounded="large">
         CONTINUE WITH PHONE NUMBER
       </AppButton>
     </div>

@@ -15,7 +15,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   navigate,
   className,
   rounded,
-  color,
+  variant,
   size,
   disabled,
   block,
@@ -31,7 +31,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
   const buttonClassName = button({
     className,
     rounded,
-    color,
+    variant,
     size,
     block,
     loading,

@@ -12,7 +12,7 @@ const SignUp: React.FC = () => (
 
     <AppButton
       className="mt-5"
-      color="blank"
+      variant="blank"
       navigate="/signup"
       size="large"
       rounded="large"

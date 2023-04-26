@@ -20,11 +20,11 @@ const HomeIndex: React.FC = () => {
    */
   const onClickLogout = useCallback((): void => {
     console.log("oke");
-  }, [dispatch]);
+  }, []);
 
   return (
     <>
-      <AppButton onClick={onClickLogout} color="facebook">
+      <AppButton onClick={onClickLogout} variant="facebook">
         Logout
       </AppButton>
     </>

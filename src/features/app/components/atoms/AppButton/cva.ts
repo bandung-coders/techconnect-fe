@@ -13,7 +13,7 @@ export const button = cva("btn", {
       small: ["btn--rounded-small"],
       large: ["btn--rounded-large"],
     },
-    color: {
+    variant: {
       primary: ["btn--primary"],
       secondary: ["btn--secondary"],
       success: ["btn--success"],
@@ -49,7 +49,7 @@ export interface IAppButtonProps extends VariantProps<typeof button> {
   className?: string;
   navigate?: string;
   rounded?: "small" | "large";
-  color?: TColor;
+  variant?: TColor;
   size?: "small" | "medium" | "large";
   disabled?: boolean;
   block?: boolean;

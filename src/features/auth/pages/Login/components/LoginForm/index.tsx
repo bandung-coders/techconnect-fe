@@ -96,7 +96,7 @@ const LoginForm: React.FC = () => {
             <AppButton
               loading={isLoadingLogin}
               type="submit"
-              color="spotify"
+              variant="spotify"
               width="121px"
               size="large"
               rounded="large"
