@@ -19,8 +19,8 @@ const HomeIndex: React.FC = () => {
    * @returns void
    */
   const onClickLogout = useCallback((): void => {
-    console.log("oke");
-  }, []);
+    dispatch(authLogout());
+  }, [dispatch]);
 
   return (
     <>
