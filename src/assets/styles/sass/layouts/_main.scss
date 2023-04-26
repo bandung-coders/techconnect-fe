@@ -10,13 +10,18 @@
 
   &__navbar {
     height: 64px;
-    background-color: $gray-1-color;
+    background-color: $dark-1-color;
   }
 
   &__sidebar {
     @extend .px-6;
     flex-basis: 240px;
     background-color: $primary-color;
+  }
+
+  &__main-content {
+    flex: 1;
+    background-color: $white-1-color;
   }
 
   &__footer {
