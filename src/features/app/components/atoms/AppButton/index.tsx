@@ -1,5 +1,5 @@
 // React
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 
 // React Router DOM
 import { useNavigate } from "react-router-dom";
@@ -58,7 +58,7 @@ const AppButton: React.FC<IAppButtonProps> = ({
       disabled={disabled}
       type={type}
     >
-      {icon !== undefined && loading === undefined && (
+      {icon !== undefined && loading === false && (
         <ReactSVG
           src={icon}
           className="mr-3"

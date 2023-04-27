@@ -94,12 +94,13 @@ const LoginForm: React.FC = () => {
             <AppCheckBox label="Remember me" />
 
             <AppButton
-              loading={isLoadingLogin}
+              // loading={isLoadingLogin}
               type="submit"
               variant="spotify"
               width="121px"
               size="large"
               rounded="large"
+              loading
             >
               LOG IN
             </AppButton>
