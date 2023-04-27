@@ -146,8 +146,8 @@ $btn-sizes: (
         #{$property}: $value;
       }
 
-      span:last-child {
-        @if ($name == "large") {
+      @if ($name == "large") {
+        span:last-child {
           font-size: 0.875rem;
           font-family: "Circular Book", sans-serif;
         }
