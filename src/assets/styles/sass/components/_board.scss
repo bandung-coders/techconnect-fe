@@ -1,0 +1,25 @@
+.board-content {
+  @extend .gap-5;
+  display: flex;
+
+  &__wrapper {
+    @extend .gap-4;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__button {
+    @extend .mb-3;
+    width: 100%;
+  }
+}
+
+.board {
+  background-color: $white-1-color;
+  box-shadow: $shadow-medium;
+  width: 290px;
+  height: 120px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
