@@ -36,9 +36,17 @@ const HomeIndex: React.FC = () => {
         Logout
       </AppButton>
       <div className="board-content">
-        <BoardContent title="New Request" data={newRequestData} />
-        <BoardContent title="In Progress" data={inProgressData} />
-        <BoardContent title="Complete" data={completeData} />
+        <BoardContent
+          droppableId={"1"}
+          title="New Request"
+          data={newRequestData}
+        />
+        <BoardContent
+          droppableId={"2"}
+          title="In Progress"
+          data={inProgressData}
+        />
+        <BoardContent droppableId={"3"} title="Complete" data={completeData} />
       </div>
     </>
   );
